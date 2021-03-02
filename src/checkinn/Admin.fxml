@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="517.0" prefWidth="785.0" style="-fx-background-color: #2a85bd;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="150.0" prefHeight="44.0" prefWidth="618.0" style="-fx-background-color: #ffffff;" />
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="92.0" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="DashBoard  ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Homepng.png" />
+                     </image>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="142.0" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="Check In">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@checkinPng.png" />
+                     </image>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="192.0" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="Employees">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@UserPng.png" />
+                     </image>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="242.0" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="Food Items">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Foodpng.png" />
+                     </image>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="292.0" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="Stocks">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@f5.png" />
+                     </image>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="342.0" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="Rooms">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@RoomPng.png" />
+                     </image>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <AnchorPane layoutY="-1.0" prefHeight="88.0" prefWidth="150.0" style="-fx-background-color: #277db2;">
+               <children>
+                  <ImageView fitHeight="67.0" fitWidth="79.0" layoutX="33.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image1.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="150.0" layoutY="42.0" prefHeight="475.0" prefWidth="618.0" style="-fx-background-color: #BDBDBD;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
