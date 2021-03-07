@@ -8,8 +8,10 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="CheckInn.jar" size="33499114" download="eager" />
+    <jar href="CheckInn.jar" size="25307875" download="eager" />
     <jar href="lib\jfoenix-8.0.10.jar" size="2710207" download="eager" />
+    <jar href="lib\jfoenix-9.0.10.jar" size="2432549" download="eager" />
+    <jar href="lib\jpedal_gpl.jar" size="2527561" download="eager" />
     <jar href="lib\mysql-connector-java-8.0.23.jar" size="2415211" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="checkinn.CheckInn"  name="CheckInn" />

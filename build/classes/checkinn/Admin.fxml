@@ -5,14 +5,15 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1025.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="checkinn.AdminController">
    <children>
-      <AnchorPane prefHeight="517.0" prefWidth="785.0" style="-fx-background-color: #2a85bd;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="640.0" prefWidth="1025.0" style="-fx-background-color: #2a85bd;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane layoutX="150.0" prefHeight="44.0" prefWidth="618.0" style="-fx-background-color: #ffffff;" />
-            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="92.0" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="DashBoard  ">
+            <AnchorPane layoutX="150.0" prefHeight="44.0" prefWidth="875.0" style="-fx-background-color: #ffffff;" />
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="92.0" onAction="#dashboard" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="DashBoard  ">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -27,7 +28,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="142.0" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="Check In">
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="142.0" onAction="#checkIn" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;;" text="Check In">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -102,16 +103,12 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <AnchorPane layoutY="-1.0" prefHeight="88.0" prefWidth="150.0" style="-fx-background-color: #277db2;">
-               <children>
-                  <ImageView fitHeight="67.0" fitWidth="79.0" layoutX="33.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@image1.jpg" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="150.0" layoutY="42.0" prefHeight="475.0" prefWidth="618.0" style="-fx-background-color: #BDBDBD;" />
+            <ImageView fitHeight="71.0" fitWidth="86.0" layoutX="24.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image1.jpg" />
+               </image>
+            </ImageView>
+            <BorderPane fx:id="adminMain" layoutX="150.0" layoutY="42.0" prefHeight="600.0" prefWidth="875.0" />
          </children>
       </AnchorPane>
    </children>

@@ -12,7 +12,6 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox alignment="CENTER" cacheShape="false" centerShape="false" scaleShape="false" stylesheets="@style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="checkinn.LogInFXMLController">
    <children>
       <AnchorPane id="AnchorPane" prefHeight="622.0" prefWidth="761.0">
@@ -50,7 +49,7 @@
                   <Button layoutX="102.0" layoutY="415.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #9C2827;" text="Forgot Password?" textFill="#eee3e3" textOverrun="WORD_ELLIPSIS" underline="true" />
                </children>
             </AnchorPane>
-            <Button layoutX="57.0" layoutY="356.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="101.0" style="-fx-background-color: #FF8C00;" text="Sign up">
+            <Button fx:id="btnSingUp" layoutX="57.0" layoutY="356.0" mnemonicParsing="false" onAction="#openSingUp" prefHeight="37.0" prefWidth="101.0" style="-fx-background-color: #FF8C00;" text="Sign up">
                <font>
                   <Font size="18.0" />
                </font>

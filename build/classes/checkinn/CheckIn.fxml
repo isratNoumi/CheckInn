@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="875.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="checkinn.CheckInController">
+   <children>
+      <AnchorPane layoutX="675.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;">
+         <children>
+            <Button layoutX="36.0" layoutY="75.0" mnemonicParsing="false" onAction="#black" style="-fx-background-color: black;" text="Button" />
+         </children></AnchorPane>
+      <AnchorPane layoutY="400.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;">
+         <children>
+            <JFXButton layoutX="87.0" layoutY="100.0" onAction="#green" style="-fx-background-color: green;" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
