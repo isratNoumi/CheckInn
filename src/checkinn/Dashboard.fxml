@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="875.0" style="-fx-background-color: #E0E0E0;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="checkinn.DashboardController">
+   <children>
+      <AnchorPane layoutX="15.0" layoutY="14.0" prefHeight="110.0" prefWidth="204.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="58.0" fitWidth="55.0" layoutX="6.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
+         </children></AnchorPane>
+      <AnchorPane layoutX="230.0" layoutY="14.0" prefHeight="77.0" prefWidth="200.0" style="-fx-background-color: white;" />
+      <AnchorPane layoutX="445.0" layoutY="14.0" prefHeight="77.0" prefWidth="200.0" style="-fx-background-color: white;" />
+      <AnchorPane layoutX="660.0" layoutY="14.0" prefHeight="77.0" prefWidth="200.0" style="-fx-background-color: white;" />
+      <Label fx:id="date" layoutX="714.0" layoutY="103.0" prefHeight="32.0" prefWidth="147.0" style="-fx-background-color: #C6FF00;" text="Date" textAlignment="JUSTIFY">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Calender%20and%20clock.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+   </children>
+</AnchorPane>

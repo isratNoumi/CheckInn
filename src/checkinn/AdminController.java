@@ -15,6 +15,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
@@ -23,6 +24,11 @@ import javafx.scene.layout.Pane;
 
 public class AdminController implements Initializable {
 
+    @FXML
+    private Label AdminTitle;
+
+    @FXML
+    private Label activeUser;
    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -50,6 +56,7 @@ public class AdminController implements Initializable {
         adminMain.setCenter(view); */
         Parent pane = FXMLLoader.load(getClass().getResource("CheckIn.fxml"));
         adminMain.setCenter(pane);
+        AdminTitle.setText(" Check In");
         
     }
     
@@ -57,7 +64,32 @@ public class AdminController implements Initializable {
     void dashboard(ActionEvent event) throws IOException {
         Parent pane = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
         adminMain.setCenter(pane);
+        AdminTitle.setText("Dashboard");
         
+    }
+    @FXML
+    void employee(ActionEvent event) throws IOException {
+        Parent pane = FXMLLoader.load(getClass().getResource("EmployeeList.fxml"));
+        adminMain.setCenter(pane);
+        AdminTitle.setText("Employees");
+    }
+
+    @FXML
+    void foodItem(ActionEvent event) {
+
+        AdminTitle.setText("Food Items");
+    }
+
+    @FXML
+    void rooms(ActionEvent event) {
+
+        AdminTitle.setText("    Rooms");
+    }
+
+    @FXML
+    void stocks(ActionEvent event) {
+
+        AdminTitle.setText("    Stocks");
     }
     
 }

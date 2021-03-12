@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="875.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="checkinn.CheckInController">
+   <children>
+      <TableView layoutX="13.0" layoutY="20.0" prefHeight="444.0" prefWidth="849.0">
+        <columns>
+          <TableColumn editable="false" prefWidth="250.0" text="Customer Name" />
+          <TableColumn editable="false" minWidth="0.0" prefWidth="128.66665649414062" text="Nationality" />
+            <TableColumn editable="false" prefWidth="99.33334350585938" text="Check in date" />
+            <TableColumn prefWidth="99.33334350585938" text="Check out date" />
+            <TableColumn prefWidth="86.66668701171875" text="Room no" />
+            <TableColumn prefWidth="90.33331298828125" text="type" />
+            <TableColumn editable="false" prefWidth="90.33331298828125" text="Price" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

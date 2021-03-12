@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,7 +13,26 @@
    <children>
       <AnchorPane prefHeight="640.0" prefWidth="1025.0" style="-fx-background-color: #2a85bd;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane layoutX="150.0" prefHeight="44.0" prefWidth="875.0" style="-fx-background-color: #ffffff;" />
+            <AnchorPane layoutX="150.0" prefHeight="44.0" prefWidth="875.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label fx:id="AdminTitle" alignment="CENTER" layoutX="399.0" layoutY="13.0" text="Dashboard">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="activeUser" layoutX="733.0" layoutY="12.0" text="User Name">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@active.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </children></AnchorPane>
             <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="92.0" onAction="#dashboard" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="DashBoard  ">
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -43,7 +63,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="192.0" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="Employees">
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="192.0" onAction="#employee" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="Employees">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -58,7 +78,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="242.0" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="Food Items">
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="242.0" onAction="#foodItem" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="Food Items">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -73,7 +93,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="292.0" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="Stocks">
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="292.0" onAction="#stocks" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="Stocks">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -88,7 +108,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="342.0" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="Rooms">
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="342.0" onAction="#rooms" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="Rooms">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
