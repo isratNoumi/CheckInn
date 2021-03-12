@@ -158,11 +158,11 @@ public class SignUpController implements Initializable {
                 message.setFrom("checkinn.cse21@gmail.com");
                 message.setRecipient(Message.RecipientType.TO, new InternetAddress(mailfield.getText()));
                 message.setSubject("OTP For your Account");
-                message.setText("Your OTP is " + OTP.getText());
+                message.setText("Hey "+namefield.getText() +",\n\nWelcome to Check Inn" + "\nHere your OTP is : " + OTP.getText());
                 message.saveChanges();
                 
                 Transport.send(message);
-                JOptionPane.showMessageDialog(null,"OTP has send to your Email id"); 
+                JOptionPane.showMessageDialog(null,"OTP has sent to your Email id"); 
                 
                 }catch(Exception e)
                 {  
