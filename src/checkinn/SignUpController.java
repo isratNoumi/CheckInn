@@ -26,11 +26,17 @@ import java.sql.*;
 import javax.swing.JOptionPane;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import java.io.IOException;
 import java.util.Properties;
 import java.util.Random;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javax.mail.Authenticator;
 import javax.mail.Message;
 import javax.mail.Message.RecipientType;
@@ -121,6 +127,7 @@ public class SignUpController implements Initializable {
             ps.setString(6,phonefield.getText());
             ps.execute();
             JOptionPane.showMessageDialog(null,"Signup successfull");
+            
             
         }catch(Exception e)
         {
@@ -230,11 +237,16 @@ public class SignUpController implements Initializable {
     //action of otp submition button.
     //if write correct otp then user can signup succesfully
      @FXML
-    void submitAction(ActionEvent event) {
+    void submitAction(ActionEvent event) throws IOException {
 
         if(OTP.getText().equals(enterotp.getText()))
         {
             signup();
+            Parent pane = FXMLLoader.load(getClass().getResource("LogInFXML.fxml"));
+        Scene scene = new Scene(pane);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
         }
         else
         {
@@ -244,7 +256,12 @@ public class SignUpController implements Initializable {
     
     //not implemented action for if someone has account already
     @FXML
-    void openLogin(ActionEvent event) {
-        System.out.println("Log In page");
+    void openLogin(ActionEvent event) throws IOException {
+        //System.out.println("Log In page");
+        Parent pane =FXMLLoader.load(getClass().getResource("LogInFXML.fxml"));
+        Scene scene = new Scene(pane);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
     }
 }
