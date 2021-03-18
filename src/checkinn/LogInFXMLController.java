@@ -55,9 +55,9 @@ public class LogInFXMLController implements Initializable {
     private TextField userName,psfld,mailfld;
     @FXML
     private PasswordField password;
-     PreparedStatement pst = null;
+         PreparedStatement pst = null;
          ResultSet rs;
-   String expass;
+         String expass;
 
     @FXML
     void openSingUp(ActionEvent event) throws IOException {
@@ -70,7 +70,7 @@ public class LogInFXMLController implements Initializable {
     }
     public void openAdmin(ActionEvent event) throws IOException, SQLException
     {
-          String usname=userName.getText();
+        String usname=userName.getText();
         String pass=password.getText();
         psfld.setText(DigestUtils.sha1Hex(pass));
         String pp =psfld.getText();
@@ -96,7 +96,7 @@ public class LogInFXMLController implements Initializable {
             rs=pst.executeQuery();
         if(rs.next()){
             */
-       if(usname.equals("admin") && pp.equals("3af0d5b33b833cfe3c9803fdec89765ad3fd399f")){
+       if(usname.equals("admin") && pp.equals("12bcd2a36d48662b095e7bb7ae13754ebd7ba956")){
            
         Parent root2=FXMLLoader.load(getClass().getResource("Admin.fxml"));
         Scene scene2 = new Scene(root2);
@@ -111,6 +111,7 @@ public class LogInFXMLController implements Initializable {
     void passONmail(ActionEvent event) throws IOException, SQLException {
 
         String mail = mailfld.getText().toString();
+        if(mail.contains("@") && mail.contains(".com")){
         String query = "SELECT * FROM logindata WHERE email_id=?";
         Connection conn = Javaconnect.ConnectDB();
         
@@ -125,8 +126,13 @@ public class LogInFXMLController implements Initializable {
              pane1.setVisible(true);
              
         }
+        
         else
-            JOptionPane.showMessageDialog(null,"Check Your Internet Connection.");
+            JOptionPane.showMessageDialog(null,"Can't find account with this email.");
+        }
+        else
+            JOptionPane.showMessageDialog(null,"Enter a Valid Email.");
+        
     }
 
     @FXML
@@ -160,11 +166,11 @@ public class LogInFXMLController implements Initializable {
                 session.setDebug(true);
                 MimeMessage message = new MimeMessage(session);
                 
-                try
+                try 
                 {
                 message.setFrom("checkinn.cse21@gmail.com");
                 message.setRecipient(Message.RecipientType.TO, new InternetAddress(mailfld.getText()));
-                message.setSubject("Old Password");
+                message.setSubject("Password");
                 message.setText("Your password is : " + expass);
                 message.saveChanges();
                 
@@ -176,5 +182,34 @@ public class LogInFXMLController implements Initializable {
                     JOptionPane.showMessageDialog(null,"Please check your internet connection");  
                 }              
             
+    }
+    
+    @FXML
+    void OpenUserPanel(ActionEvent event) throws SQLException, IOException {
+        String name=userName.getText();
+        String pass=password.getText();
+        if(name.equals("")||pass.equals(""))
+        {
+            JOptionPane.showMessageDialog(null,"Please Fillup all the information");
+        }
+        else{
+             String query = "SELECT * FROM `logindata` WHERE username=? or email_id=? and password=?";
+            Connection con = Javaconnect.ConnectDB();
+            pst = con.prepareStatement(query);
+            pst.setString(1, name);
+            pst.setString(2,name);
+            pst.setString(3, pass);
+            rs=pst.executeQuery();
+        if(rs.next()){
+            Parent pane = FXMLLoader.load(getClass().getResource("User.fxml"));
+        Scene scene = new Scene(pane);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+        }
+        else
+            JOptionPane.showMessageDialog(null,"Wrong username/email or password");
+        }
+
     }
 }

@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="875.0" style="-fx-background-color: #81C784;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="checkinn.CheckInController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="875.0" style="-fx-background-color: #81C784;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="checkinn.EmployeeListController">
    <children>
       <TableView layoutX="13.0" layoutY="20.0" prefHeight="444.0" prefWidth="849.0">
         <columns>
@@ -19,22 +19,22 @@
             <TableColumn prefWidth="138.33331298828125" text="Salary" />
         </columns>
       </TableView>
-      <Button layoutX="40.0" layoutY="510.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" stylesheets="@ButtonAdmin.css" text="Add Employee">
+      <Button layoutX="40.0" layoutY="510.0" mnemonicParsing="false" onAction="#addEmploy" prefHeight="40.0" prefWidth="140.0" stylesheets="@ButtonAdmin.css" text="Add Employee">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="220.0" layoutY="510.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" stylesheets="@ButtonAdmin.css" text="Update">
+      <Button layoutX="220.0" layoutY="510.0" mnemonicParsing="false" onAction="#updateEmploy" prefHeight="40.0" prefWidth="140.0" stylesheets="@ButtonAdmin.css" text="Update">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="400.0" layoutY="510.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" stylesheets="@ButtonAdmin.css" text="Delete">
+      <Button layoutX="400.0" layoutY="510.0" mnemonicParsing="false" onAction="#deleteEmploy" prefHeight="40.0" prefWidth="140.0" stylesheets="@ButtonAdmin.css" text="Delete">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="580.0" layoutY="510.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" stylesheets="@ButtonAdmin.css" text="Details">
+      <Button layoutX="580.0" layoutY="510.0" mnemonicParsing="false" onAction="#detailEmploy" prefHeight="40.0" prefWidth="140.0" stylesheets="@ButtonAdmin.css" text="Details">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

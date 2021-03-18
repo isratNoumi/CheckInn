@@ -117,7 +117,7 @@ public class SignUpController implements Initializable {
     {
         try
         {
-            String sql = "insert into logindata values(?,?,?,?,?,?)";
+            String sql = "insert into logindata values(?,?,?,?,?,?,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
             ps.setString(1,namefield.getText());
             ps.setString(2,mailfield.getText());
@@ -125,6 +125,12 @@ public class SignUpController implements Initializable {
             ps.setString(4,addressfield.getText());
             ps.setString(5,genderfield.getText());
             ps.setString(6,phonefield.getText());
+            ps.setString(7,null);
+            ps.setString(8,null);
+            ps.setString(9,null);
+            ps.setString(10,null);
+            ps.setString(11,null);
+            ps.setString(12,null);
             ps.execute();
             JOptionPane.showMessageDialog(null,"Signup successfull");
             
@@ -243,10 +249,10 @@ public class SignUpController implements Initializable {
         {
             signup();
             Parent pane = FXMLLoader.load(getClass().getResource("LogInFXML.fxml"));
-        Scene scene = new Scene(pane);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(scene);
-        window.show();
+            Scene scene = new Scene(pane);
+            Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setScene(scene);
+            window.show();
         }
         else
         {

@@ -129,6 +129,21 @@
                </image>
             </ImageView>
             <BorderPane fx:id="adminMain" layoutX="150.0" layoutY="42.0" prefHeight="600.0" prefWidth="875.0" />
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="537.0" onAction="#logOut" prefHeight="44.0" prefWidth="96.0" style="-fx-background-color: #277db2;" text="Log Out">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logout-512.png" />
+                     </image>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
          </children>
       </AnchorPane>
    </children>

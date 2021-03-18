@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="875.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="checkinn.CheckInAdminController">
+   <children>
+      <TableView fx:id="guestTable" layoutX="13.0" layoutY="20.0" prefHeight="444.0" prefWidth="849.0" stylesheets="@table.css">
+        <columns>
+          <TableColumn fx:id="name" editable="false" prefWidth="191.0" text="Customer Name" />
+          <TableColumn fx:id="mail" editable="false" minWidth="0.0" prefWidth="169.0" text="Email" />
+            <TableColumn fx:id="gndr" prefWidth="90.33331298828125" text="Gender" />
+            <TableColumn fx:id="Cin" editable="false" prefWidth="119.0" text="Check in date" />
+            <TableColumn fx:id="Cout" prefWidth="99.33334350585938" text="Check out date" />
+            <TableColumn fx:id="roomNo" prefWidth="86.66668701171875" text="Room no" />
+            <TableColumn fx:id="price" editable="false" prefWidth="90.33331298828125" text="Price" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="686.0" layoutY="510.0" onAction="#updateInfo" prefHeight="48.0" prefWidth="155.0" style="-fx-background-color: #4CAF50;" stylesheets="@ButtonAdmin.css" text="Update">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="497.0" layoutY="511.0" onAction="#addInfo" prefHeight="48.0" prefWidth="155.0" style="-fx-background-color: #4CAF50;" stylesheets="@ButtonAdmin.css" text="Add">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

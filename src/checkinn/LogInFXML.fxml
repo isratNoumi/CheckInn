@@ -42,7 +42,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button layoutX="86.0" layoutY="349.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="193.0" style="-fx-background-color: #FF8C00;" text="Log In as User" textFill="#fffbfb">
+                  <Button layoutX="86.0" layoutY="349.0" mnemonicParsing="false" onAction="#OpenUserPanel" prefHeight="37.0" prefWidth="193.0" style="-fx-background-color: #FF8C00;" text="Log In as User" textFill="#fffbfb">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
