@@ -32,6 +32,11 @@ public class AdminController implements Initializable {
 
     @FXML
     private Label activeUser;
+    
+    public void setUserName(String name)
+    {
+        this.activeUser.setText(name);
+    }
    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -51,12 +56,7 @@ public class AdminController implements Initializable {
 
     @FXML
     void checkIn(ActionEvent event) throws IOException {
-
-        //System.out.println("Hi");
-        /*
-        AdminScreenLoader object = new AdminScreenLoader();
-        Pane view = object.getPage("Dashboard.fxml");
-        adminMain.setCenter(view); */
+        
         Parent pane = FXMLLoader.load(getClass().getResource("CheckInAdmin.fxml"));
         adminMain.setCenter(pane);
         AdminTitle.setText(" Check In");
@@ -79,26 +79,33 @@ public class AdminController implements Initializable {
 
     @FXML
     void foodItem(ActionEvent event) throws IOException {
-
+        try {
+            Parent pane = FXMLLoader.load(getClass().getResource("FoodItems.fxml"));
+            adminMain.setCenter(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(AdminController.class.getName()).log(Level.SEVERE, null, ex);
+        };
         AdminTitle.setText("Food Items");
-        Parent pane = FXMLLoader.load(getClass().getResource("FoodItems.fxml"));
-        adminMain.setCenter(pane);
     }
 
     @FXML
     void rooms(ActionEvent event) throws IOException {
-
-        AdminTitle.setText("    Rooms");
+        
         Parent pane = FXMLLoader.load(getClass().getResource("Rooms.fxml"));
         adminMain.setCenter(pane);
+        AdminTitle.setText("    Rooms");
     }
 
     @FXML
     void stocks(ActionEvent event) throws IOException {
-
+        
+        try {
+            Parent pane = FXMLLoader.load(getClass().getResource("Stocks.fxml"));
+            adminMain.setCenter(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(AdminController.class.getName()).log(Level.SEVERE, null, ex);
+        };
         AdminTitle.setText("    Stocks");
-        Parent pane = FXMLLoader.load(getClass().getResource("Stocks.fxml"));
-        adminMain.setCenter(pane);
     }
     
     @FXML

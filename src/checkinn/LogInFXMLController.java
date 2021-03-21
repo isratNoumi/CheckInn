@@ -20,7 +20,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -55,6 +55,10 @@ public class LogInFXMLController implements Initializable {
     private TextField userName,psfld,mailfld;
     @FXML
     private PasswordField password;
+    
+    @FXML
+    private Label name;
+    
          PreparedStatement pst = null;
          ResultSet rs;
          String expass;
@@ -74,38 +78,49 @@ public class LogInFXMLController implements Initializable {
         String pass=password.getText();
         psfld.setText(DigestUtils.sha1Hex(pass));
         String pp =psfld.getText();
-        
-        
-        
-       /* 
-        if(usname.equals("")||pass.equals(""))
-        {
-            JOptionPane.showMessageDialog(null,"Please Fillup all the information");
-        
+        name.setText(usname);
        
-
-    }
-        else{
-             String query = "SELECT * FROM `logindata` WHERE username=? or email_id=? and password=?";
-             
-            Connection con = Javaconnect.ConnectDB();
-            pst = con.prepareStatement(query);
-            pst.setString(1, usname);
-            pst.setString(2,usname);
-            pst.setString(3, pass);
-            rs=pst.executeQuery();
-        if(rs.next()){
-            */
        if(usname.equals("admin") && pp.equals("12bcd2a36d48662b095e7bb7ae13754ebd7ba956")){
            
-        Parent root2=FXMLLoader.load(getClass().getResource("Admin.fxml"));
-        Scene scene2 = new Scene(root2);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(scene2);
-        window.show();
+        FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("Admin.fxml"));
+            loader.load();
+            AdminController display = loader.getController();
+            display.setUserName(usname);
+            Parent pane = loader.getRoot();
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(pane));
+            stage.show();
         }
-    //    }
-       
+       else
+       {String n=userName.getText();
+        String p=password.getText();
+        if(n.equals("")||p.equals(""))
+        {
+            JOptionPane.showMessageDialog(null,"Please Fillup all the information");
+        }
+        else{
+             String query = "SELECT * FROM `admin` WHERE name=? and pass=?";
+            Connection con = Javaconnect.ConnectDB();
+            pst = con.prepareStatement(query);
+            pst.setString(1, n);
+            pst.setString(2, p);
+            rs=pst.executeQuery();
+        if(rs.next()){
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("Admin.fxml"));
+            loader.load();
+            AdminController display = loader.getController();
+            display.setUserName(n);
+            Parent pane = loader.getRoot();
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(pane));
+            stage.show();
+        }
+        else
+            JOptionPane.showMessageDialog(null,"Wrong username/email or password\nor\nYou are not belong to Admin.");
+        }
+       }
     }
     @FXML
     void passONmail(ActionEvent event) throws IOException, SQLException {

@@ -97,6 +97,7 @@
                   <Button layoutY="429.0" mnemonicParsing="false" onAction="#backtologin" prefHeight="25.0" prefWidth="58.0" style="-fx-background-color: #9C2827;" text="← Back" textFill="#eee3e3" textOverrun="WORD_ELLIPSIS" />
                </children>
             </AnchorPane>
+            <Label fx:id="name" layoutX="80.0" layoutY="67.0" text="Label" textFill="WHITE" visible="false" />
          </children>
       </AnchorPane>
    </children>
