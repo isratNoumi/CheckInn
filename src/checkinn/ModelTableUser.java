@@ -10,15 +10,17 @@ package checkinn;
  * @author Rodoshi
  */
 public class ModelTableUser {
-    String name,email,gender,room,checkIn,checkOut, price;
 
-    public ModelTableUser(String name, String email, String gender, String room, String checkIn, String checkOut, String price) {
+    String name, phone, roomType, room, checkIn, checkOut, totalDay, price;
+
+    public ModelTableUser(String name, String phone, String roomType, String room, String checkIn, String checkOut, String totalDay, String price) {
         this.name = name;
-        this.email = email;
-        this.gender = gender;
+        this.phone = phone;
+        this.roomType = roomType;
         this.room = room;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
+        this.totalDay = totalDay;
         this.price = price;
     }
 
@@ -30,20 +32,20 @@ public class ModelTableUser {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getGender() {
-        return gender;
+    public String getRoomType() {
+        return roomType;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
     }
 
     public String getRoom() {
@@ -70,6 +72,14 @@ public class ModelTableUser {
         this.checkOut = checkOut;
     }
 
+    public String getTotalDay() {
+        return totalDay;
+    }
+
+    public void setTotalDay(String totalDay) {
+        this.totalDay = totalDay;
+    }
+
     public String getPrice() {
         return price;
     }
@@ -77,8 +87,5 @@ public class ModelTableUser {
     public void setPrice(String price) {
         this.price = price;
     }
-    
-    
-    
-    
+
 }

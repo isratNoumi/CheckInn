@@ -23,8 +23,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-
-
 public class AdminController implements Initializable {
 
     @FXML
@@ -32,44 +30,42 @@ public class AdminController implements Initializable {
 
     @FXML
     private Label activeUser;
-    
-    public void setUserName(String name)
-    {
+
+    public void setUserName(String name) {
         this.activeUser.setText(name);
     }
-   
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+
         try {
             Parent pane = FXMLLoader.load(getClass().getResource("DashboardAdmin.fxml"));
             adminMain.setCenter(pane);
         } catch (IOException ex) {
             Logger.getLogger(AdminController.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }    
-    
-    
+    }
+
     @FXML
     private BorderPane adminMain;
-  
 
     @FXML
     void checkIn(ActionEvent event) throws IOException {
-        
+
         Parent pane = FXMLLoader.load(getClass().getResource("CheckInAdmin.fxml"));
         adminMain.setCenter(pane);
         AdminTitle.setText(" Check In");
-        
+
     }
-    
+
     @FXML
     void dashboard(ActionEvent event) throws IOException {
         Parent pane = FXMLLoader.load(getClass().getResource("DashboardAdmin.fxml"));
         adminMain.setCenter(pane);
         AdminTitle.setText("Dashboard");
-        
+
     }
+
     @FXML
     void employee(ActionEvent event) throws IOException {
         Parent pane = FXMLLoader.load(getClass().getResource("EmployeeList.fxml"));
@@ -80,7 +76,7 @@ public class AdminController implements Initializable {
     @FXML
     void foodItem(ActionEvent event) throws IOException {
         try {
-            Parent pane = FXMLLoader.load(getClass().getResource("FoodItems.fxml"));
+            Parent pane = FXMLLoader.load(getClass().getResource("FoodItemsadmin.fxml"));
             adminMain.setCenter(pane);
         } catch (IOException ex) {
             Logger.getLogger(AdminController.class.getName()).log(Level.SEVERE, null, ex);
@@ -90,7 +86,7 @@ public class AdminController implements Initializable {
 
     @FXML
     void rooms(ActionEvent event) throws IOException {
-        
+
         Parent pane = FXMLLoader.load(getClass().getResource("Rooms.fxml"));
         adminMain.setCenter(pane);
         AdminTitle.setText("    Rooms");
@@ -98,7 +94,7 @@ public class AdminController implements Initializable {
 
     @FXML
     void stocks(ActionEvent event) throws IOException {
-        
+
         try {
             Parent pane = FXMLLoader.load(getClass().getResource("Stocks.fxml"));
             adminMain.setCenter(pane);
@@ -107,14 +103,31 @@ public class AdminController implements Initializable {
         };
         AdminTitle.setText("    Stocks");
     }
-    
+
+    @FXML
+    void checkOut(ActionEvent event) throws IOException {
+        Parent pane = FXMLLoader.load(getClass().getResource("Checkout.fxml"));
+        adminMain.setCenter(pane);
+        AdminTitle.setText(" Check Out");
+
+    }
+
+    @FXML
+    void credit(ActionEvent event) throws IOException {
+        Parent pane = FXMLLoader.load(getClass().getResource("credit.fxml"));
+        adminMain.setCenter(pane);
+        AdminTitle.setText("  Credit");
+
+    }
+
     @FXML
     void logOut(ActionEvent event) throws IOException {
         Parent pane = FXMLLoader.load(getClass().getResource("LogInFXML.fxml"));
         Scene scene = new Scene(pane);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene);
+        window.centerOnScreen();
         window.show();
     }
-    
+
 }

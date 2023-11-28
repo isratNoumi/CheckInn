@@ -5,10 +5,9 @@
  */
 package checkinn;
 
-
 public class ModelTableDashAdmin {
-    
-    String bookid,name,email,reg,room,checkIn,checkOut, price;
+
+    String bookid, name, email, reg, room, checkIn, checkOut, price;
 
     public ModelTableDashAdmin(String bookid, String name, String email, String reg, String room, String checkIn, String checkOut, String price) {
         this.bookid = bookid;
@@ -84,5 +83,5 @@ public class ModelTableDashAdmin {
     public void setPrice(String price) {
         this.price = price;
     }
-    
+
 }

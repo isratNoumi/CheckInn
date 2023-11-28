@@ -17,13 +17,12 @@ import javafx.stage.Stage;
  * @author HP
  */
 public class CheckInn extends Application {
-    
+
     @Override
     public void start(Stage stage) throws Exception {
-      
-        
-       Parent root=FXMLLoader.load(getClass().getResource("LogInFXML.fxml"));
-        
+
+        Parent root = FXMLLoader.load(getClass().getResource("LogInFXML.fxml"));
+
         Scene scene = new Scene(root);
         Image icon = new Image(getClass().getResourceAsStream("image1.jpg"));
         stage.getIcons().add(icon);
@@ -31,7 +30,7 @@ public class CheckInn extends Application {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
-        
+
     }
 
     /**
@@ -40,10 +39,5 @@ public class CheckInn extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
-    
 
-        
-    
-    
 }

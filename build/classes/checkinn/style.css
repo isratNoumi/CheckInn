@@ -1,5 +1,5 @@
 
 .root{
-  -fx-background-image:url('login2.jpg');
-  -fx-background-size:stretch;
+    -fx-background-image:url('login2.jpg');
+    -fx-background-size:stretch;
 }

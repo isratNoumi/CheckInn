@@ -1,8 +1,8 @@
-
 package checkinn;
 
 public class EmployeeTab1 {
-    String id,name,gender,date,month,year,mail,hireDate,address,jobTitle,contactNo,salary;
+
+    String id, name, gender, date, month, year, mail, hireDate, address, jobTitle, contactNo, salary;
 
     public EmployeeTab1(String id, String name, String gender, String date, String month, String year, String mail, String hireDate, String address, String jobTitle, String contactNo, String salary) {
         this.id = id;
@@ -114,7 +114,5 @@ public class EmployeeTab1 {
     public void setSalary(String salary) {
         this.salary = salary;
     }
-    
-    
-    
+
 }

@@ -1,8 +1,8 @@
-
 package checkinn;
 
 public class EmployeeTab2 {
-    String Aname,Apass;
+
+    String Aname, Apass;
 
     public EmployeeTab2(String Aname, String Apass) {
         this.Aname = Aname;
@@ -25,6 +25,4 @@ public class EmployeeTab2 {
         this.Apass = Apass;
     }
 
-    
-    
 }
